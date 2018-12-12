@@ -6,11 +6,10 @@ if [[ $# -eq 0 ]] ; then
 fi
 
 
-
 SOURCE_FOLDER=$1
 # Specify destination folder to mount your project into docker
-DEST_FOLDER=/home/hugo
+DEST_FOLDER=/home/Test
 
-sudo docker run -v "$SOURCE_FOLDER:$DEST_FOLDER" -it epitechcontent/epitest-docker /bin/bash
+sudo docker run --rm -v "$SOURCE_FOLDER:$DEST_FOLDER" -it epitechcontent/epitest-docker /bin/bash
 
 exit 0
